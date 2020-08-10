@@ -5,7 +5,7 @@
 
 ## What is this
 
-I'm building a React app around a JSON file of data which I created from the code found in [this repo](https://github.com/dislersd/api_data_fetch_and_manipulate).
+I'm building a React app around a JSON file of data which I created with the code found in [this repo](https://github.com/dislersd/api_data_fetch_and_manipulate).
 
 This is mostly just practice with React skills but maybe it will turn into something cool?
 
