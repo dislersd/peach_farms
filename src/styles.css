@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-color: rgb(245, 194, 128);
+  width: 100%;
+}
+
+h1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.search-input {
+  margin: 20px;
+}

@@ -1,0 +1,72 @@
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+
+.farm-card {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border-radius: 5px;
+  width: 25%;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  top: 0;
+  box-shadow: 0px 2px 4px rgba(20, 20, 20, 0.2);
+  overflow: hidden;
+}
+
+@media (max-width: 830px) {
+  .farm-card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .farm-card {
+    width: 70%;
+  }
+}
+
+.farm-card:hover {
+  transition: all 0.1s ease-out;
+}
+
+.nearby-farms-list {
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+
+.nearby-farm {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.nearby-farm:hover {
+  background-color: rgb(245, 194, 128);
+}
+
+.clicker-arrow span {
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+
+.hide {
+  /* display: none; */
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background: white;
+  border: none;
+}
+
+.show {
+  visibility: visible;
+  height: auto;
+  transition: 0.2s ease;
+}
