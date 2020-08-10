@@ -21,8 +21,8 @@ function FarmCard({ farm, searchSingle }) {
       </div>
       <div className={`nearby-farms-list ${active ? "show" : "hide"}`}>
         {/* mapping over farm's list of nearby farms to create unordered list*/}
-        {farm[1].closeFarms.map((nearbyFarm) => (
-          <ul>
+        <ul>
+          {farm[1].closeFarms.map((nearbyFarm) => (
             <li
               onClick={(e) => searchSingle(e)}
               className="nearby-farm"
@@ -30,8 +30,8 @@ function FarmCard({ farm, searchSingle }) {
             >
               {nearbyFarm}
             </li>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </div>
     </div>
   );
