@@ -1,7 +1,34 @@
 .trav-wrapper {
   border: 1px solid black;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+.trav-wrapper select {
+  margin: 5px;
+  padding: 5px;
+}
+
+.trav-wrapper ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  padding-left: 15px;
+  list-style-type: decimal;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+  margin-bottom: 20px;
+}
+
+.trav-wrapper li {
+  margin: 5px 0;
+  margin-left: 15px;
 }

@@ -3,21 +3,19 @@ import "../styles/traversal.css";
 import data from "../farm_graph.json";
 
 function Traversal() {
-  const [farm, setFarm] = useReducer(
-    (state, newState) => ({ ...state, ...newState }),
-    {
-      startFarm: "Karabin Farms",
-      endFarm: "",
-    }
-  );
-
   const [farms] = useState(data);
-  // const [currentFarm] = useState("Karabin Farms");
+  const [farm, setFarm] = useState({
+    startFarm: "Karabin Farms",
+    endFarm: "Gardner Farms",
+  });
   const [travelPath, setTravelPath] = useState([]);
 
   return (
     <>
-      <div className="trav-wrapper">
+      <div className="trav-wrapper farm-card">
+        <p>
+          Uses a breadth first search to find a path from one farm to another
+        </p>
         <label>starting farm</label>
         <select
           name="startFarm"
@@ -43,22 +41,24 @@ function Traversal() {
           ))}
         </select>
         <button onClick={traverse}> start traversal </button>
-        <hr/>
-        Travel Path:
-        <div style={{ borderBottom: "1px solid black" }}>
-          {travelPath.map((farm) => (
-            <p key={farm}>{farm}</p>
+        <hr />
+        {travelPath.length > 0 && <h3>Travel Path:</h3>}
+        <ol>
+          {travelPath.map((farm, i) => (
+            <li key={farm}>{farm}</li>
           ))}
-        </div>
+        </ol>
+          {travelPath.length > 0 && <button onClick={() => setTravelPath([])}> reset </button>}
       </div>
     </>
   );
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setFarm({ [name]: value });
+    setFarm({ ...farm, [name]: value });
   }
 
+  // breadth first search
   function traverse() {
     console.log("go");
     let visited = new Set();

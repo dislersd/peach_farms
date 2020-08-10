@@ -22,6 +22,20 @@ h1:hover {
   cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  margin: 10px 0 5px 5px;
+  background-color: rgb(245, 194, 128);
+  padding: 7px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+button:hover {
+  filter: hue-rotate(90deg);
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
