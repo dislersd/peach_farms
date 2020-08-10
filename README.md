@@ -1,5 +1,7 @@
 # peach_farms
 
+check it out on [codesandbox](https://codesandbox.io/s/exaptivecodechallenge-3nql3?file=/src/farm_graph.json)
+
 ![Screen Shot 2020-08-09 at 6 08 16 PM](https://user-images.githubusercontent.com/43049713/89745932-a272a680-da6b-11ea-8b51-353c30ef6765.png)
 
 
