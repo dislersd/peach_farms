@@ -2,15 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .farm-card {
-  text-align: start;
+  text-align: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   border-radius: 5px;
   width: 25%;
   margin: 20px;
@@ -40,6 +40,7 @@
 .nearby-farms-list {
   margin: 10px 0 0 0;
   padding: 10px;
+  text-align: start;
 }
 
 .nearby-farm {

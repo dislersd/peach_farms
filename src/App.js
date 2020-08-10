@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "./styles.css";
-import "./farms.css";
+import "./styles/styles.css";
+import "./styles/farms.css";
 // farm_graph.json is created from my javascript code hosted here https://github.com/dislersd/api_data_fetch_and_manipulate
 import data from "./farm_graph.json";
 import FarmList from "./components/FarmList";
+import Traversal from "./components/Traversal";
 
 export default function App() {
   // state to hold farm data (gettinga all the entries from json object and turning into array with Object.entries)
@@ -43,6 +44,7 @@ export default function App() {
         value={input}
         onChange={(e) => handleChange(e)}
       />
+      <Traversal farms={farms}/>
       {/* passing down result prop into farmlist - result is either all farms or the filtered farms 
         - also passing "searchSingleFarm" function down */}
       <FarmList farms={result} searchSingle={searchSingleFarm} />
