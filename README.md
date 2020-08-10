@@ -11,4 +11,4 @@ I'm building a React app around a JSON file of data which I created with the cod
 
 This is mostly just practice with React skills but maybe it will turn into something cool?
 
-The data is peach farms in Connecticut (name, phone number, nearby farms) and I have created a graph of all of the farms wich are close to each other.
+The data is peach farms (name, phone number, nearby farms) and I have created a graph of all of the farms wich are close to each other.
