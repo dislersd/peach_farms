@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useReducer } from "react";
 import "../styles/traversal.css";
 import data from "../farm_graph.json";
 
@@ -11,21 +11,13 @@ function Traversal() {
     }
   );
 
-  const [farms, setFarms] = useState(data);
-  const [currentFarm, setCurrentFarm] = useState("Karabin Farms");
+  const [farms] = useState(data);
+  // const [currentFarm] = useState("Karabin Farms");
   const [travelPath, setTravelPath] = useState([]);
 
   return (
     <>
       <div className="trav-wrapper">
-        Current:
-        <p style={{ borderBottom: "1px solid black" }}>{currentFarm}</p>
-        Travel Path:
-        <div style={{ borderBottom: "1px solid black" }}>
-          {travelPath.map((farm) => (
-            <p key={farm}>{farm}</p>
-          ))}
-        </div>
         <label>starting farm</label>
         <select
           name="startFarm"
@@ -51,6 +43,13 @@ function Traversal() {
           ))}
         </select>
         <button onClick={traverse}> start traversal </button>
+        <hr/>
+        Travel Path:
+        <div style={{ borderBottom: "1px solid black" }}>
+          {travelPath.map((farm) => (
+            <p key={farm}>{farm}</p>
+          ))}
+        </div>
       </div>
     </>
   );
@@ -68,7 +67,7 @@ function Traversal() {
     while (q.length > 0) {
       let path = q.shift();
       let vertex = path[path.length - 1];
-      if (vertex == farm.endFarm) {
+      if (vertex === farm.endFarm) {
         setTravelPath(path);
         return;
       }
